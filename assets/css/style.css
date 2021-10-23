@@ -1,37 +1,14 @@
 @font-face {
     font-family: vazir;
-    src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff") format(woff);
+    src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff2") format(woff2), url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff") format(woff);
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
   font-family: vazir;
 }
 
-
-body {
-    margin: 0;
-}
-
-h1, h2, h3, p {
-    margin: 0 !important;
-}
-
-#reset {
-    border: none;
-    outline: none;
-    display: block;
-    margin-bottom: 5px;
-    width: 100%;
-    background-color: transparent;
-    border: 1px solid black;
-}
-
-#reset:hover {
-    background-color: #ddd;
-}
 
 .block {
     width: 100%;
@@ -42,6 +19,7 @@ h1, h2, h3, p {
 
 span.cell {
     background-color: indigo;
+    cursor: pointer;
     border: 1px solid gray;
     font-weight: bold;    
     color: white;

@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css">
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <meta property="og:title" content="تست هوش - یک تا پنجاه">
+    <meta property="og:description" content="مغزتون پیر شده یا هنوز جوونه؟">
+    <meta property="og:image" content="favicon.png">
+    <meta property="og:url" content="https://pouyacodes.github.io/1to50">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
     <title>تست هوش - یک تا پنجاه</title>
 </head>
 
@@ -16,10 +20,11 @@
     <div class="container">
         <main class="my-3">
             <h1 class="fs-1 text-center">تست هوش - یک تا پنجاه</h1>
+            <hr />
             <p class="text-center">در جدول زیر، سعی کنید اعداد یک تا پنجاه را به سرعت بزنید.</p>
             <div class="row m-0">
                 <!-- Timer and current number -->
-                <div class="col-md-4 border">
+                <div class="col-md-4">
                     <div class="info">
                         <p><small>زمان: </small></p>
                         <p class="text-center fs-2"><strong id="timer">0.0</strong><strong> ثانیه</strong></p>
@@ -27,12 +32,11 @@
                     <div class="info">
                         <p><small>عدد فعلی: </small></p>
                         <p class="text-center fs-2"><strong id="currentNumber">1</strong></p>
-                    </div>
-                    <hr>
-                    <button id="reset" class="rounded-pill">مجدد</button>
+                    </div>                    
+                    <button id="reset" class="btn btn-outline-primary w-100 my-1 rounded-pill">مجدد</button>
                 </div>
                 <!-- Table of numbers -->
-                <div class="col-md-8 border d-flex justify-content-center align-items-center flex-column">
+                <div class="col-md-8 d-flex justify-content-center align-items-center flex-column">
                     <div class="block">
                         <span class="cell">1</span>
                         <span class="cell">2</span>
@@ -59,23 +63,52 @@
                     </div>
                 </div>
             </div>
-            <div class="">
+            <div class="visually-hidden">
+                <hr />
                 <h1>نتایج: </h1>
-                <div class="text-center">
-                    <h3>امتیاز شما: </h3>
-                    <h1 class="fs-1" id="score"></h1>
-                    <p id="message"></p>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <h3>امتیاز شما: </h3>
+                            <h1 class="fs-1" id="score"></h1>
+                            <p id="message"></p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="d-flex flex-column">
+                            <div class="btn my-1 btn-outline-success">20 - 29 (بسیار با هوش)</div>
+                            <div class="btn my-1 btn-outline-success">30 - 39 (باهوش)</div>
+                            <div class="btn my-1 btn-outline-success">40 - 59 (بالاتر از خوب)</div>
+                            <div class="btn my-1 btn-outline-primary">60 - 79 (خوب)</div>
+                            <div class="btn my-1 btn-outline-primary">80 - 99 (طبیعی)</div>
+                            <div class="btn my-1 btn-outline-warning">100 - 130 (خسته)</div>
+                            <div class="btn my-1 btn-outline-danger">130 به بالا (در آستانه پیر مغزی)</div>
+                        </div>
+                    </div>
                 </div>
+                <hr />
+                <h6 class="text-center">
+                    می‌توانید این صفحه را با دوستان خود در شبکه‌های اجتماعی نیز به اشتراک بگذارید.
+                </h6>
                 <div class="d-flex flex-grow-1 flex-shrink-1 justify-content-around">
-                    <a href="whatsapp://send?text=%D8%AA%D8%B3%D8%AA%20%D9%87%D9%88%D8%B4%20%DB%8C%DA%A9%20%D8%AA%D8%A7%20%D9%BE%D9%86%D8%AC%D8%A7%D9%87%D8%8C%20%D8%AD%D8%AA%D9%85%D8%A7%20%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86%D8%B4%20%DA%A9%D9%86!%20%D8%AC%D8%A7%D9%84%D8%A8%D9%87!%0D%0Ahttps%3A%2F%2Fpouyacodes.github.io%2F1to50"><i title="Share on WhatsApp" class="bi bi-whatsapp bg-whatsapp fs-1"></i></a>
-                    <a href="tg://msg_url?url=https://pouyacodes.github.io/1to50/"><i title="Share on Telegram" class="bi bi-telegram bg-telegram fs-1"></i></a>
-                    <a href="https://www.facebook.com/share.php?v=4&src=bm&u=%D8%AA%D8%B3%D8%AA%20%D9%87%D9%88%D8%B4%20%DB%8C%DA%A9%20%D8%AA%D8%A7%20%D9%BE%D9%86%D8%AC%D8%A7%D9%87%D8%8C%20%D8%AD%D8%AA%D9%85%D8%A7%20%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86%D8%B4%20%DA%A9%D9%86!%20%D8%AC%D8%A7%D9%84%D8%A8%D9%87!%0D%0Ahttps%3A%2F%2Fpouyacodes.github.io%2F1to50"><i title="Share on Facebook" class="bi bi-facebook bg-facebook fs-1"></i></a>
-                    <a href="https://twitter.com/intent/tweet?text=%D8%AA%D8%B3%D8%AA%20%D9%87%D9%88%D8%B4%20%DB%8C%DA%A9%20%D8%AA%D8%A7%20%D9%BE%D9%86%D8%AC%D8%A7%D9%87%D8%8C%20%D8%AD%D8%AA%D9%85%D8%A7%20%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86%D8%B4%20%DA%A9%D9%86!%20%D8%AC%D8%A7%D9%84%D8%A8%D9%87!&url=https://pouyacodes.github.io/1to50"><i title="Share on Twitter" class="bi bi-twitter bg-twitter fs-1"></i></a>
+                    <a
+                        href="whatsapp://send?text=%D8%AA%D8%B3%D8%AA%20%D9%87%D9%88%D8%B4%20%DB%8C%DA%A9%20%D8%AA%D8%A7%20%D9%BE%D9%86%D8%AC%D8%A7%D9%87%D8%8C%20%D8%AD%D8%AA%D9%85%D8%A7%20%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86%D8%B4%20%DA%A9%D9%86!%20%D8%AC%D8%A7%D9%84%D8%A8%D9%87!%0D%0Ahttps%3A%2F%2Fpouyacodes.github.io%2F1to50"><i
+                            title="Share on WhatsApp" class="bi bi-whatsapp bg-whatsapp fs-1"></i></a>
+                    <a href="tg://msg_url?url=https://pouyacodes.github.io/1to50/"><i title="Share on Telegram"
+                            class="bi bi-telegram bg-telegram fs-1"></i></a>
+                    <a
+                        href="https://www.facebook.com/share.php?v=4&src=bm&u=%D8%AA%D8%B3%D8%AA%20%D9%87%D9%88%D8%B4%20%DB%8C%DA%A9%20%D8%AA%D8%A7%20%D9%BE%D9%86%D8%AC%D8%A7%D9%87%D8%8C%20%D8%AD%D8%AA%D9%85%D8%A7%20%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86%D8%B4%20%DA%A9%D9%86!%20%D8%AC%D8%A7%D9%84%D8%A8%D9%87!%0D%0Ahttps%3A%2F%2Fpouyacodes.github.io%2F1to50"><i
+                            title="Share on Facebook" class="bi bi-facebook bg-facebook fs-1"></i></a>
+                    <a
+                        href="https://twitter.com/intent/tweet?text=%D8%AA%D8%B3%D8%AA%20%D9%87%D9%88%D8%B4%20%DB%8C%DA%A9%20%D8%AA%D8%A7%20%D9%BE%D9%86%D8%AC%D8%A7%D9%87%D8%8C%20%D8%AD%D8%AA%D9%85%D8%A7%20%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86%D8%B4%20%DA%A9%D9%86!%20%D8%AC%D8%A7%D9%84%D8%A8%D9%87!&url=https://pouyacodes.github.io/1to50"><i
+                            title="Share on Twitter" class="bi bi-twitter bg-twitter fs-1"></i></a>
                 </div>
             </div>
         </main>
         <footer>
-            <p class="text-center border-top">Source code on <a href="https://github.com/pouyacodes/1to50" target="_blank">github</a></p>
+            <p class="text-center border-top">Source code on <a href="https://github.com/pouyacodes/1to50"
+                    target="_blank">github</a></p>
         </footer>
     </div>
 </body>
