@@ -93,10 +93,8 @@ const initBlocks = () => {
 
             if (nextNumber === undefined)
                 this.parentNode.removeChild(this);
-            else {
+            else
                 this.innerHTML = nextNumber;
-                this.setAttribute('data-numbers', cellNumbers.toString());
-            }
 
             currentElement.innerHTML = currentNumber === 50 ? "پایان" : ++currentNumber;
         });
