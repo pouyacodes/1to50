@@ -3,11 +3,7 @@
     src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff2") format(woff2), url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff") format(woff);
 }
 
-*,
-*::before,
-*::after {
-  font-family: vazir;
-}
+body { font-family: vazir, sans-serif; }
 
 
 .block {
