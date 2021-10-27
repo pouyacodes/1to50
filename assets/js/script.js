@@ -92,7 +92,7 @@ const initBlocks = () => {
             const nextNumber = cellNumbers[cellNumbers.indexOf(this.innerHTML) + 1];
 
             if (nextNumber === undefined)
-                this.parentNode.removeChild(this);
+                this.classList.add('hidden');
             else
                 this.innerHTML = nextNumber;
 

@@ -29,6 +29,8 @@ span.cell:hover {
     background-color: rgb(52, 4, 87);
 }
 
+.hidden { visibility: hidden; }
+
 
 .bg-whatsapp { color: #4AC959; }
 .bg-telegram { color: #0088CC ; }
