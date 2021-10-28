@@ -1,10 +1,13 @@
 @font-face {
-    font-family: vazir;
-    src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff2") format(woff2), url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff") format(woff);
+    font-family: 'vazir';
+	font-style: normal;
+	font-weight: 100;
+	font-display: swap;
+    src: url(https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff2) format('woff2'), url(https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff) format('woff');
 }
 
 
-body {  font-family: vazir, sans-serif; }
+body {  font-family: 'vazir', sans-serif; }
 
 .container { 
     background-color: white;
