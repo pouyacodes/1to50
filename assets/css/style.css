@@ -3,7 +3,12 @@
     src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff2") format(woff2), url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff") format(woff);
 }
 
-body { font-family: vazir, sans-serif; }
+
+body {  font-family: vazir, sans-serif; }
+
+.container { 
+    background-color: white;
+}
 
 
 .block {
@@ -22,7 +27,6 @@ span.cell {
     font-size: 1.6em;
     width: 20%;
     margin: 2px;
-    transition: all 0.2s linear;
 }
 
 span.cell:hover {

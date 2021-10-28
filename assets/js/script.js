@@ -3,18 +3,15 @@ const numbersTableElement = document.getElementById('numbers');
 const timerElement = document.getElementById('timer');
 const currentElement = document.getElementById('currentNumber');
 
-const gameIntervals = [
-    {max: 7, min: 0, message: 'غیر قابل باور!! عالی'},
-    {max: 10, min: 8, message: 'فوق العاده هستید.'},
-    {max: 15, min: 11, message: 'بسیار سریع هستید. عالی!'},
-    {max: 20, min: 16, message: '!نسبت به سایرین سرعت عمل خوبی دارید. احسنت.'},
-    {max: 30, min: 21, message: 'دمت گرم! عجب سرعتی!'},
-    {max: 40, min: 31, message: 'سرعت خوبی دارید، با تمرین می‌تونید بهتر عمل کنید.'},
-    {max: 50, min: 41, message: 'بد نبود! قطعا می‌تونی بهتر از این باشی!'},
-    {max: 70, min: 51, message: 'دوباره امتحان کن، حدس می‌زنم بهتر از این می‌شه.'},
-    {max: 90, min: 71, message: 'تلاش کن بهتر از این بشه!'},
-    {max: 120, min: 91, message: 'سرعت عملت خوب نبود، اما قطعا می‌تونی بهتر از این عمل کنی.'}    
+const gameIntervals = [    
+    {min: 0, max: 29, message: "غیرقابل باور!! عالی!!"},
+    {min: 30, max: 39, message: "شما جزء برترین‌ها هستید :)"},
+    {min: 40, max: 59, message: "سرعت‌عمل بالایی دارید."},
+    {min: 60, max: 79, message: "خوب هستید و جای پیشرفت دارید."},
+    {min: 80, max: 99, message: "در وضعیت مناسب و طبیعی قرار دارید."},
+    {min: 100, max: 130, message: "با تمرین و تلاش می‌توانید به درجات بالایی برسید."}
 ];
+
 
 let timer;
 let currentNumber = 1;
@@ -42,28 +39,32 @@ const getPositions = () => {
     return positions;
 }
 
-const getScoreMessage = () => {
-    let result = '';
+const getScore = () => {
+    const result = {message: 'در آستانه پیر مغزی هستید.', target: document.querySelector('[data-range="130>="]')};
 
     for (const interval of gameIntervals) {
         if (interval.min <= seconds && seconds <= interval.max) {
-            result = interval.message;
+            result.message = interval.message;
+            result.target = document.querySelector(`[data-range="${interval.min}-${interval.max}"]`);
             break;
         }
     }
 
-    return result ? result : 'متاسفانه سرعت عمل تون کافی نبود، مجدد تلاش کنید.';
+    return result;
 };
 
 const initResult = () => {
     clearInterval(timer);
+    seconds = seconds.toFixed(0);
     numbersTableElement.innerHTML = "تمام شد.";
-    document.getElementById('message').innerHTML = getScoreMessage();
-    document.getElementById('score').innerHTML = seconds.toFixed(0);
+
+    const score = getScore();
+    document.getElementById('message').innerHTML = score.message;
+    score.target.classList = score.target.classList.toString().replace('btn-outline', 'btn');
+    document.getElementById('score').innerHTML = seconds;
 
     const resultElement = document.getElementById('result');
     resultElement.classList.remove('visually-hidden');
-    resultElement.classList.add('zoom-effect');
 };
 
 const initBlocks = () => {
@@ -80,7 +81,7 @@ const initBlocks = () => {
         cell.innerHTML = positions[i][0];
 
         cell.addEventListener('click', function () {
-            const cellCurrentNumber = Number(this.innerHTML);
+            const cellCurrentNumber = Number(this.innerHTML);            
 
             if (currentNumber !== cellCurrentNumber)
                 return;
