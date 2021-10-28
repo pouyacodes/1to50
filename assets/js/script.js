@@ -1,4 +1,5 @@
 document.getElementById('reset').addEventListener('click', () => location.reload());
+
 const numbersTableElement = document.getElementById('numbers');
 const timerElement = document.getElementById('timer');
 const currentElement = document.getElementById('currentNumber');
@@ -23,7 +24,7 @@ const random = (min, max) => Math.floor(Math.random() * (max - min) + min);
 const getRandomPosition = (positions) => {
     while (true) {
         const randomPos = random(0, 25);
-        if (!positions[randomPos] || positions[randomPos].length < 2) return randomPos;
+        if (positions[randomPos] === undefined || positions[randomPos].length < 2) return randomPos;
     }
 }
 
@@ -81,7 +82,7 @@ const initBlocks = () => {
         cell.innerHTML = positions[i][0];
 
         cell.addEventListener('click', function () {
-            const cellCurrentNumber = Number(this.innerHTML);            
+            const cellCurrentNumber = Number(this.innerHTML);
 
             if (currentNumber !== cellCurrentNumber)
                 return;
@@ -110,7 +111,5 @@ const initBlocks = () => {
     }
 
 }
-
-
 
 initBlocks();
