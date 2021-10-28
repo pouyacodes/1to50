@@ -1,7 +1,5 @@
 # Brain test (1 to 50)
-
-It's just a simple javascript application 1 to 50 brain test.
+It's just a simple brain and speed test.
 
 # Test
-Published here:
-https://pouyacodes.github.io/1to50
+Test it here: https://pouyacodes.github.io/1to50
