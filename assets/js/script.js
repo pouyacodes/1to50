@@ -73,7 +73,7 @@
         const resultElement = document.getElementById('result');
         resultElement.classList.remove('visually-hidden');
 
-        if (seconds < user.best) {
+        if (user.best === 0 || seconds < user.best) {
             bestScoreElement.innerHTML = seconds;
             setUserStatus(user, 'best', seconds);
         }
