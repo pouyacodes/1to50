@@ -9,10 +9,6 @@
 
 body {  font-family: 'vazir', sans-serif; }
 
-.container { 
-    background-color: white;
-}
-
 
 .block {
     width: 100%;
@@ -43,3 +39,7 @@ span.cell:hover {
 .bg-telegram { color: #0088CC ; }
 .bg-facebook { color: #3b5998; }
 .bg-twitter {color: #1DA1F2; }
+.navbar-dark {
+    color: #fff;
+    background-color: #22272c;
+}

@@ -14,9 +14,9 @@
     <meta property="og:image" content="https://pouyacodes.github.io/1to50/favicon.png" />
     <meta property="og:url" content="https://pouyacodes.github.io/1to50" />
     <meta name="twitter:title" content="تست هوش - یک تا پنجاه" />
-    <meta name="twitter:description" content="مغزتون پیر شده یا هنوز جوونه؟"/>
+    <meta name="twitter:description" content="مغزتون پیر شده یا هنوز جوونه؟" />
     <meta name="twitter:card" content="summary" />
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap-icons/css/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
@@ -24,17 +24,56 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a href="/" class="mb-0 h1">
+                <img src="favicon.png" alt="logo"  width="50px" height="50px" />
+            </a>
+            <span class="navbar-brand">
+                تست هوش 1 تا 50
+            </span>
+            <div class="collapse navbar-collapse" id="navbar-items">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="https://pouyacodes.github.io/1to50/">سورس کد این صفحه در گیت هاب</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="mailto:thesirpr@gmail.com">گزارش باگ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white">
+                            <div class="form-check form-switch">
+                                <label class="form-check-label" for="themeSwitch">
+                                    تم تیره
+                                    <input class="form-check-input" type="checkbox" id="themeSwitch">
+                                </label>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
     <div class="container my-2 p-2 rounded-top">
         <main class="my-3">
             <h1 class="fs-1 text-center">تست هوش - یک تا پنجاه</h1>
             <hr />
-            <p class="text-center">در جدول زیر، سعی کنید اعداد یک تا پنجاه را در سریع ترین زمان ممکن بزنید. از زمانی که عدد 1 رو بزنید زمان سنج شما فعال خواهد شد.</p>
+            <p class="text-center">در جدول زیر، سعی کنید اعداد یک تا پنجاه را در سریع ترین زمان ممکن بزنید. از زمانی که
+                عدد 1 رو بزنید زمان سنج شما فعال خواهد شد.</p>
             <div class="row m-0">
                 <!-- Timer and current number -->
                 <div class="col-md-4">
                     <div class="info">
+                        <p><small>بهترین رکورد: </small></p>
+                        <p class="text-center fs-2"><strong><span id="bestScore">0</span> ثانیه</strong></p>
+                    </div>
+                    <hr />
+                    <div class="info">
                         <p><small>زمان: </small></p>
-                        <p class="text-center fs-2"><strong id="timer">0</strong><strong> ثانیه</strong></p>
+                        <p class="text-center fs-2"><strong><span id="timer">0</span> ثانیه</strong></p>
                     </div>
                     <div class="info">
                         <p><small>عدد فعلی: </small></p>
@@ -49,8 +88,8 @@
             </div>
             <div id="result" class="visually-hidden">
                 <hr />
-                <h1>نتایج: </h1>
-                
+                <h1>نتایج </h1>
+
                 <div class="row">
                     <div class="col-md-4">
                         <div class="text-center">
@@ -67,7 +106,8 @@
                             <div data-range="60-79" class="btn my-1 btn-outline-primary">60 - 79 (خوب)</div>
                             <div data-range="80-99" class="btn my-1 btn-outline-primary">80 - 99 (طبیعی)</div>
                             <div data-range="100-130" class="btn my-1 btn-outline-warning">100 - 130 (خسته)</div>
-                            <div data-range="130>=" class="btn my-1 btn-outline-danger">130 به بالا (در آستانه پیر مغزی)</div>
+                            <div data-range="130>=" class="btn my-1 btn-outline-danger">130 به بالا (در آستانه پیر مغزی)
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -96,6 +136,7 @@
         </footer>
     </div>
 </body>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/script.js"></script>
 
 </html>
